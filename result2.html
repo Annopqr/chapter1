@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>피자 주문서</title>
+</head>
+<body>
+    <fieldset >
+        <h2 style="color: red;">피자 주문 내역</h2>
+        <hr>
+        <ul>
+            <li>고객명 : <span id="clientName"></span></li>
+            <li>전화번호 : <span id="clientPhone"></span> </li>
+            <li>Email : <span id="clientEmail"></span></li>
+        </ul>
+        <hr>
+        <ul>
+            <li>피자 종류 : <span id="pizza"></span></li>
+            <li>사이즈 : <span id="size"></span></li>
+            <li>선택한 토핑 : <span id="topping"></span></li>
+            <li>희망 배송시간 : <span id="wishTime"></span> </li>
+        </ul>
+        <hr>
+        <h4>요청사항</h4>
+        <div id="request">
+            
+        </div>
+    </fieldset>
+
+    <script>
+        const params = new URL(location.href).searchParams;
+        const clientName = document.getElementById("clientName");
+        clientName.innerText = params.get("clientName");
+        
+        const clientPhone = document.getElementById("clientPhone");
+        clientPhone.innerText = params.get("clientPhone");
+
+        const clientEmail = document.getElementById("clientEmail");
+        clientEmail.innerText = params.get("clientEmail");
+
+        const pizza = document.getElementById("pizza");
+        pizza.innerText = params.get("pizza");
+
+        const size = document.getElementById("size");
+        size.innerText = params.get("size");
+
+        const topping = document.getElementById("topping");
+        topping.innerText = params.get("topping");
+
+        const wishTime = document.getElementById("wishTime");
+        wishTime.innerText = params.get("wishTime");
+
+        const request = document.getElementById("request");
+        request.innerText = params.get("request");
+    </script>
+</body>
+</html>

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>납품정보 결과</title>
+</head>
+<body>
+    <fieldset>
+        <h2 style="color:blue;">납품 내역</h2>
+        <hr>
+        <ul>
+            <li>납품자명: <span id="name"></span></li>
+            <li>email: <span id="email"></span></li>
+            <li>홈페이지: <span id="homepage"></span></li>
+            <li>지역:<span id="location"></span></li>
+        </ul>
+        <hr>
+        <ul>
+            <li>상품명: <span id="productName"></span></li>
+            <li>납품수량: <span id="amount"></span></li>
+            <li>납품등급: <span id="grade"></span></li>
+            
+        </ul>
+        <hr>
+        기타사항<div id="etc"></div>
+    </fieldset>
+
+    <script>
+        
+        const params = new URL(location.href).searchParams;
+        const name = document.getElementById("name");
+        name.innerText = params.get("name");
+        
+        const email = document.getElementById("email");
+        email.innerText = params.get("email");
+
+        const homepage = document.getElementById("homepage");
+        homepage.innerText = params.get("homepage");
+
+        const location = document.getElementById("location");
+        location.innerText = params.get("location");
+
+        const productName = document.getElementById("productName");
+        productName.innerText = params.get("productName");
+
+        const amount = document.getElementById("amount");
+        amount.innerText = params.get("amount");
+
+        const grade = document.getElementById("grade");
+        grade.innerText = params.get("grade");
+
+        const etc = document.getElementById("etc");
+        etc.innerText = params.get("etc");
+    </script>
+</body>
+</html>

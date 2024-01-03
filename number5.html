@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>연습문제 5</title>
+</head>
+<body>
+    <h1>회원 가입</h1>
+
+    <fieldset>
+        <legend>필수 입력 사항</legend>
+        <strong>ID</strong><input type="text" placeholder="아이디 10자 이내"><button>중복 확인</button><br>
+        <strong>비밀번호</strong> <input type="password" placeholder="영문, 숫자, 특수문자 포함 8자 이상"><br>
+        <strong>비밀번호 확인</strong><input type="password" ><br>
+        <strong>Email</strong><input type="email" >
+        <select>
+            <option>직접입력</option>
+            <option>naver.com</option>
+            <option>daum.com</option>
+        </select>
+    </fieldset>
+    <fieldset>
+        <legend>추가 정보</legend>
+        성별 : <input type="radio" name="gender" value="남성">남성
+        <input type="radio" name="gender" value="여성">여성<br>
+        생년월일: <input type="date" name="birthday">
+        <br>
+        취미
+        <input type="checkbox" name="hobby">야구
+        <input type="checkbox" name="hobby">농구
+        <input type="checkbox" name="hobby">축구
+        <input type="checkbox" name="hobby">공부
+        <input type="checkbox" name="hobby">음악감상
+        <br>
+        자기소개
+        <textarea name="intro" rows="10" cols="80"></textarea>
+    </fieldset>
+    <button>회원가입</button>
+    <button>다시입력</button>
+</body>
+</html>
